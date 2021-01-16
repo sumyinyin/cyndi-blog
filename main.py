@@ -75,7 +75,7 @@ class Comment(db.Model):
     parent_post = relationship("BlogPost", back_populates="comments")
     parent_id = db.Column(db.Integer, db.ForeignKey("blog_posts.id"))
 
-db.create_all()
+# db.create_all()
 
 
 def admin_required(f):
